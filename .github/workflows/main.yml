@@ -15,7 +15,7 @@ jobs:
     - name: Install
       run: |
         sudo systemctl start postgresql.service
-        sudo cpan DataTable::Text GitHub::Crud
+        sudo cpan -T -i DataTable::Text GitHub::Crud
 
     - name: Test
       run: |
