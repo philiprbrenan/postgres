@@ -12,18 +12,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Install
-      run: |
-        sudo apt update
-        sudo apt -y install build-essential postgresql-contrib
-
-    - name: Database
-      run: |
-        sudo apt update
-        sudo apt -y install postgresql postgresql-contrib
-
     - name: Test
       run: |
-        #sudo systemctl start postgresql.service
+        sudo systemctl start postgresql.service
         sudo -i -u postgres psql < load.txt
         
