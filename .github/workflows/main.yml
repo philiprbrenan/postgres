@@ -12,6 +12,12 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: Install
+      run: |
+        sudo cpan -i JSON
+        sudo -i -u postgres psql < load.txt > output.txt
+        perl upload.pl
+        
     - name: Test
       run: |
         sudo systemctl start postgresql.service
