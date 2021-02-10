@@ -14,7 +14,7 @@ jobs:
 
     - name: Install
       run: |
-        sudo cpan -T -i JSON Digest::SHA1
+        sudo cpan -T -i JSON Digest::SHA1 Date::Manip
         
     - name: Test
       run: |
