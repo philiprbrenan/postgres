@@ -14,9 +14,7 @@ jobs:
 
     - name: Install
       run: |
-        sudo cpan -i JSON
-        sudo -i -u postgres psql < load.txt > output.txt
-        perl upload.pl
+        sudo cpan -T -i JSON
         
     - name: Test
       run: |
