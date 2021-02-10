@@ -15,10 +15,14 @@ jobs:
     - name: Install
       run: |
         sudo apt update
-        sudo apt -y install build-essential postgresql postgresql-contrib
+        sudo apt -y install build-essential postgresql-contrib
+
+    - name: Database
+      run: |
+        sudo apt update
+        sudo apt -y postgresql postgresql-contrib
 
     - name: Test
       run: |
-        sudo -i -u postgres
-        psql < load.txt
+        sudo -i -u postgres psql < load.txt
         
