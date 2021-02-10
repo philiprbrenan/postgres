@@ -1,6 +1,6 @@
 # Postgres on GitHub
 
-name:Test
+name: Test
 
 on:
   push
