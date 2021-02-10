@@ -12,11 +12,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Install
-      run: |
-        sudo systemctl start postgresql.service
-        sudo cpan -T -i DataTable::Text GitHub::Crud
-
     - name: Test
       run: |
         sudo -i -u postgres psql < load.txt > output.txt
