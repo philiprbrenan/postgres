@@ -1,0 +1,6 @@
+create database test;
+\c test
+create table test (name text,  address text);
+insert test values("aaa", "AAAA");
+insert test values("bbb", "BBBB");
+select * from test;
