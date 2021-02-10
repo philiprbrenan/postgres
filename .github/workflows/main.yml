@@ -20,10 +20,10 @@ jobs:
     - name: Database
       run: |
         sudo apt update
-        sudo apt -y postgresql postgresql-contrib
+        sudo apt -y install postgresql postgresql-contrib
 
     - name: Test
       run: |
-        sudo systemctl start postgresql.service
+        #sudo systemctl start postgresql.service
         sudo -i -u postgres psql < load.txt
         
