@@ -1,6 +1,6 @@
-# Build and test CPAN module:  DataTableText
+# Postgres on GitHub
 
-name: Test
+name:Test
 
 on:
   push
