@@ -15,5 +15,7 @@ jobs:
     - name: Test
       run: |
         sudo systemctl start postgresql.service
-        sudo -i -u postgres psql < load.txt
+        sudo cpan GitHub::Crud 
+        sudo -i -u postgres psql < load.txt > output.txt
+        perl upload.pl
         
