@@ -1,0 +1,24 @@
+# Build and test CPAN module:  DataTableText
+
+name: Test
+
+on:
+  push
+
+jobs:
+  ubuntu:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install
+      run: |
+        sudo apt update
+        sudo apt -y install build-essential postgresql postgresql-contrib
+
+    - name: Test
+      run: |
+        sudo -i -u postgres
+        psql < load.txt
+        
