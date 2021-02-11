@@ -75,7 +75,7 @@ sub GitHub::Crud::Response::new($$)                                             
        }
      }
 
-    ($R->status) = split / /, $R->Status || $R->status || 0;                    # Save response status
+    ($R->status) = split / /, $R->Status || $R->status || 200;                  # Save response status - github returns status == 0 when running as an action so we make it 200
 
     return $gitHub->response = $R;                                              # Return successful response
    }
@@ -882,7 +882,7 @@ sub currentRepo()                                                               
     return $g;
    }
   undef
-}
+ }
 
 sub createIssueInCurrentRepo($$)                                                # Create an issue in the current GitHub repo if we are running on GitHub
  {my ($title, $body) = @_;                                                      # Title of issue, body of issue
