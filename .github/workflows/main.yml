@@ -15,11 +15,11 @@ jobs:
     - name: Install
       run: |
         sudo cpan -T -i Data::Table::Text Digest::SHA1 Date::Manip
-
     
     - name: Test
       run: |
         sudo systemctl start postgresql.service
-        sudo -i -u postgres psql < load.txt
+        sudo -i -u postgres psql < load.txt > output.txt
+        cat output.txt
         GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} perl upload.pl 
         
