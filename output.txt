@@ -4,10 +4,12 @@ CREATE TABLE
 INSERT 0 1
 INSERT 0 1
 INSERT 0 1
+INSERT 0 1
  name | address 
 ------+---------
  aaa  | AAAA
  bbb  | BBBB
  ccc  | CCCC
-(3 rows)
+ ddd  | DDDD
+(4 rows)
 
