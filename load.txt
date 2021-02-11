@@ -4,4 +4,5 @@ create table test (name text,  address text);
 insert into test values('aaa', 'AAAA');
 insert into test values('bbb', 'BBBB');
 insert into test values('ccc', 'CCCC');
+insert into test values('ddd', 'DDDD');
 select * from test;
