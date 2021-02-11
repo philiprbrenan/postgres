@@ -11,16 +11,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-
-    - name: Install
-      run: |
-        sudo cpan -T -i JSON Digest::SHA1 Date::Manip
-        
+    
     - name: Test
-      env:
-        GITHUB_REPOSITORY: ${{ secrets.GITHUB_TOKEN }}
       run: |
         sudo systemctl start postgresql.service
-        sudo -i -u postgres psql < load.txt > output.txt
-        perl upload.pl
+        sudo -i -u postgres psql < load.txt
         
