@@ -922,7 +922,7 @@ sub writeFileFromFileFromCurrentRun($)                                          
  {my ($target) = @_;                                                            # The target file name in the repo, the text to write into this file
   if (my $g = currentRepo)                                                      # We are on GitHub
    {$g->gitFile = $target;
-    $g->write(readFile($target)s);
+    $g->write(readFile($target));
    }
  }
 
