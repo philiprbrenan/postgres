@@ -14,7 +14,8 @@ jobs:
     
     - name: Install
       run: |
-        sudo cpan -T -i Data::Table::Text
+        sudo cpan -T -i Data::Table::Text Digest::SHA1
+
     
     - name: Test
       run: |
