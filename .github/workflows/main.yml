@@ -12,9 +12,13 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
+    - name: Install
+      run: |
+        sudo cpan -T -i Data::Table::Text
+    
     - name: Test
       run: |
-        GITHUB_TOKEN='aaaa'; echo $GITHUB_TOKEN 
         sudo systemctl start postgresql.service
         sudo -i -u postgres psql < load.txt
+        GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} perl upload.pl 
         
