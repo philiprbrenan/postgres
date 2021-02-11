@@ -1,6 +1,6 @@
 # postgres
 
-Run a Postgres database as a github action - see the action output for the results of the query in load.txt
+Run a Postgres database as a github action - see file output.txt for the results of running the query in load.txt
 
 ```
 Run sudo systemctl start postgresql.service
