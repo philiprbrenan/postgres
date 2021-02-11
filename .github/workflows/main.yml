@@ -17,11 +17,10 @@ jobs:
         sudo cpan -T -i JSON Digest::SHA1 Date::Manip
         
     - name: Test
-      with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
+      env:
+        GITHUB_REPOSITORY: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        
         sudo systemctl start postgresql.service
         sudo -i -u postgres psql < load.txt > output.txt
-        GITHUB_REPOSITORY=${{ secrets.GITHUB_TOKEN }} perl upload.pl
+        perl upload.pl
         
