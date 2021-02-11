@@ -17,7 +17,8 @@ jobs:
         sudo cpan -T -i JSON Digest::SHA1 Date::Manip
         
     - name: Test
-      repo-token: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
       run: |
         
         sudo systemctl start postgresql.service
