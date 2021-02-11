@@ -882,7 +882,7 @@ sub currentRepo()                                                               
     return $g;
    }
   undef
- }
+}
 
 sub createIssueInCurrentRepo($$)                                                # Create an issue in the current GitHub repo if we are running on GitHub
  {my ($title, $body) = @_;                                                      # Title of issue, body of issue
