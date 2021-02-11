@@ -867,7 +867,7 @@ sub createIssueFromSavedToken($$$$;$)                                           
  }
 
 sub currentRepo()                                                               # Create a github object for the  current repo if we are on github actions
- {if (my $r = $ENV{GITHUB_TOKEN})                                               # We are on GitHub
+ {if (my $r = $ENV{GITHUB_REPOSITORY})                                          # We are on GitHub
    {my ($user, $repo) = split m(/), $r, 2;
     my $g = GitHub::Crud::new;
     $g->userid                    = $user;
