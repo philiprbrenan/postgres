@@ -10,7 +10,7 @@ use v5.16;
 our $VERSION = 20210125;
 use warnings FATAL => qw(all);
 use strict;
-use Carp              qw(confess cluck);
+use Carp              qw(confess);
 use Data::Dump        qw(dump);
 use Data::Table::Text qw(:all !fileList);
 use Digest::SHA1      qw(sha1_hex);
@@ -390,7 +390,7 @@ sub read($;$)                                                                   
 
 sub write($$;$)                                                                 # Write utf8 data into a L<GitHub> file.\mRequired attributes: L<userid|/userid>, L<repository|/repository>, L<patKey|/patKey>. Either specify the target file on:<github> using the L<gitFile|/gitFile> attribute or supply it as the third parameter.  Returns B<true> on success else L<undef>.
  {my ($gitHub, $data, $File) = @_;                                              # GitHub object, data to be written, optionally the name of the file on github
-  cluck "";
+
   unless($data)                                                                 # No data supplied so delete the file
    {if ($File)
      {my $file = $gitHub->file;
@@ -922,7 +922,7 @@ sub writeFileFromFileFromCurrentRun($)                                          
  {my ($target) = @_;                                                            # The target file name in the repo, the text to write into this file
   if (my $g = currentRepo)                                                      # We are on GitHub
    {$g->gitFile = $target;
-    $g->write(readFile($target));
+    $g->write(scalar(readFile($target)));
    }
  }
 
