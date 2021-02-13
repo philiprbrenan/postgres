@@ -6,6 +6,23 @@ on:
   push
 
 jobs:
+  js:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Install
+      run: |
+        sudo apt install nodejs
+        npm install pg
+      
+    - name: Test
+      run: |
+        sudo systemctl start postgresql.service
+        sudo -i -u postgres psql < load.txt
+        nodejs select1.js
+
   perl:
     runs-on: ubuntu-latest
 
@@ -29,20 +46,4 @@ jobs:
         cat output.txt
         GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} perl upload.pl 
         
-  js:
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    
-    - name: Install
-      run: |
-        sudo apt install nodejs
-        npm install pg
-      
-    - name: Test
-      run: |
-        sudo systemctl start postgresql.service
-        sudo -i -u postgres psql < load.txt
-        PGDATABASE=test 
-        sudo -i -u postgres nodejs ./select1.js
+  
