@@ -16,11 +16,18 @@ jobs:
       run: |
         sudo cpan -T -i Data::Table::Text Digest::SHA1 Date::Manip
     
-    - name: Test
+    - name: InstallJs
+      run: |
+        npm install pg
+      
+    - name: Test1
       run: |
         sudo systemctl start postgresql.service
         cat load.txt
         sudo -i -u postgres psql < load.txt > output.txt
         cat output.txt
         GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} perl upload.pl 
-        
+      
+    - name: Test2
+      run: |
+        nodejs select.js
