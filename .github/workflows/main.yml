@@ -18,6 +18,7 @@ jobs:
     
     - name: InstallJs
       run: |
+        sudo apt install nodejs
         npm install pg
       
     - name: Test1
