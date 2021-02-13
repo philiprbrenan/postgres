@@ -31,5 +31,5 @@ jobs:
       
     - name: Test2
       run: |
-        print env 
+        printenv 
         nodejs select.js
