@@ -13,3 +13,4 @@ INSERT 0 1
  ddd  | DDDD
 (4 rows)
 
+CREATE ROLE
