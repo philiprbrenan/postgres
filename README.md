@@ -1,6 +1,6 @@
 # postgres
 
-Run a Postgres database as a github action - see file **output.txt** for the results of running the query in **load.txt**. Clone this repo and you can run your own queries too in Perl or Javascript.  Much easier than using docker.
+Run a Postgres database as a github action - see file **output.txt** for the results of running the query in **load.txt**. Clone this repo and you can run your own queries too in C, Javascript, Perl, Python.  Much easier than using docker.
 
 ```
 Run sudo systemctl start postgresql.service
@@ -16,8 +16,12 @@ INSERT 0 1
 (2 rows)
 ```
 
-**select.pl** shows how to connect to Postgres directly from Perl.
+**select.c** shows how to connect to Postgres directly from Ansi C.
 
 **select.js** shows how to connect to Postgres directly from Javascript.
+
+**select.pl** shows how to connect to Postgres directly from Perl.
+
+**select.py** shows how to connect to Postgres directly from Python.
 
 **upload.pl** shows how to return results to this repository from the action being run.
