@@ -6,6 +6,22 @@ on:
   push
 
 jobs:
+  c:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Install
+      run: |
+        sudo apt install libdpq-dev build-essential
+      
+    - name: Test
+      run: |
+        sudo systemctl start postgresql.service
+        sudo -i -u postgres psql < load.txt
+        gcc -rdynamic -Wall -I/usr/include/postgresql/ -o "select" "select.c"  -lm -lpq; ./select
+
   js:
     runs-on: ubuntu-latest
 
