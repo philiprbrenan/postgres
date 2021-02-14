@@ -14,7 +14,7 @@ jobs:
     
     - name: Install
       run: |
-        sudo apt install libdpq-dev build-essential
+        sudo apt install libpq-dev build-essential
       
     - name: Test
       run: |
