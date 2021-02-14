@@ -16,6 +16,8 @@ INSERT 0 1
 (2 rows)
 ```
 
+**select.pl** shows how to connect to Postgres directly from Perl.
+
 **select.js** shows how to connect to Postgres directly from Javascript.
 
 **upload.pl** shows how to return results to this repository from the action being run.
