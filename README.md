@@ -15,3 +15,5 @@ INSERT 0 1
  bbb  | BBBB
 (2 rows)
 ```
+
+**select.js** shows how to connect to Postgres directly from Javascript.
