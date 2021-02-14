@@ -49,7 +49,7 @@ jobs:
     
     - name: Install
       run: |
-        pip3 pgdb    
+        pip3 install pgdb    
 
     - name: Test
       run: |
