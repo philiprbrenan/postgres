@@ -9,6 +9,7 @@ public class Select
   public static void main(String[] args)
    {Connection conn = null;
     Statement  stmt = null;
+    
     try
      {conn = DriverManager.getConnection(URL, USER, PASS);
 
@@ -20,6 +21,7 @@ public class Select
         String address = rs.getString(2);
         System.out.print("Name: " + name+" Address: " + address+"\n");
        }
+      
       rs.close();
       stmt.close();
       conn.close();
