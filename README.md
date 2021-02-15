@@ -18,6 +18,8 @@ INSERT 0 1
 
 **select.c** shows how to connect to Postgres directly from Ansi C.
 
+**Select.java** shows how to connect to Postgres directly from Java.
+
 **select.js** shows how to connect to Postgres directly from Javascript.
 
 **select.pl** shows how to connect to Postgres directly from Perl.
