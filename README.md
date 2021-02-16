@@ -1,4 +1,6 @@
-# postgres
+# Postgres
+
+![Test](https://github.com/philiprbrenan/postgres/workflows/Test/badge.svg)
 
 Run a Postgres database as a github action - see file **output.txt** for the results of running the query in **load.txt**. Clone this repo and you can run your own queries too in **C**, **Java**, **Javascript**, **Perl**, **Python**.  Much easier than using docker.
 
