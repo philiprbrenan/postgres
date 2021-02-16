@@ -27,11 +27,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    
-    - name: Install
-      run: |
-        sudo apt install nodejs
-        
+       
     - name: Test
       run: |
         sudo systemctl start postgresql.service
