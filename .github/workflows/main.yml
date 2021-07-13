@@ -1,4 +1,4 @@
-# Postgres on Git Hub
+# Postgres on GitHub 2021-07-13 at 21:11:54
 
 name: Test
 
@@ -11,11 +11,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    
+
     - name: Install
       run: |
         sudo apt install libpq-dev build-essential
-      
+
     - name: Test
       run: |
         sudo systemctl start postgresql.service
@@ -27,25 +27,25 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-       
+
     - name: Test
       run: |
         sudo systemctl start postgresql.service
         sudo  -i -u postgres psql < load.txt
         wget  -q https://jdbc.postgresql.org/download/postgresql-42.2.18.jar
         javac -d . -g -cp postgresql-42.2.18.jar Select.java && java -ea -cp .:postgresql-42.2.18.jar Select
-        
+
   js:
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
-    
+
     - name: Install
       run: |
         sudo apt install nodejs
         npm install pg
-      
+
     - name: Test
       run: |
         sudo systemctl start postgresql.service
@@ -57,10 +57,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    
+
     - name: Install
       run: |
-        sudo cpan -T -i Data::Table::Text GitHub::Crud Digest::SHA1 Date::Manip DBI DBD::Pg    
+        sudo cpan -T -i Data::Table::Text GitHub::Crud Digest::SHA1 Date::Manip DBI DBD::Pg
 
     - name: Test
       run: |
@@ -68,17 +68,17 @@ jobs:
         cat load.txt
         sudo -i -u postgres psql < load.txt > output.txt
         perl select.pl
-        GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} perl upload.pl 
+        GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} perl upload.pl
 
   python:
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
-    
+
     - name: Install
       run: |
-        pip3 install pgdb    
+        pip3 install pgdb
 
     - name: Test
       run: |
@@ -86,21 +86,21 @@ jobs:
         cat load.txt
         sudo -i -u postgres psql < load.txt > output.txt
         python3 select.py
-        
+
 
   Apache:
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
-    
+
     - name: Install Perl
       run: |
-        sudo cpan -T -i Data::Table::Text GitHub::Crud Digest::SHA1 Date::Manip DBI DBD::Pg    
-    
+        sudo cpan -T -i Data::Table::Text GitHub::Crud Digest::SHA1 Date::Manip DBI DBD::Pg
+
     - name: Install Apache
       run: |
-        sudo apt install apache2 
+        sudo apt install apache2
         sudo a2enmod cgid
         sudo systemctl restart apache2
         curl http://localhost/
@@ -108,8 +108,6 @@ jobs:
     - name: Test
       run: |
         sudo systemctl start postgresql.service
-        cat load.txt
-        sudo -i -u postgres psql < load.txt > output.txt
-        perl select.pl
-        GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} perl upload.pl 
-
+        sudo cp selectCGI.pl /usr/lib/cgi-bin/
+        sudo chmod ugo=rwx /usr/lib/cgi-bin/selectCGI.pl
+        curl http://localhost/cgi-bin/selectCGI.pl
