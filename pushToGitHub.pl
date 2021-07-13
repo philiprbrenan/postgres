@@ -101,7 +101,7 @@ jobs:
         cat load.txt
         sudo -i -u postgres psql < load.txt > output.txt
         perl select.pl
-        GITHUB_TOKEN=\${{ secrets.GITHUB_TOKEN }} perl -Ilib -M"GitHub::Crud" -e"GitHub::Crud::writeFileFromFileFromCurrentRun q(output.txt);"
+        GITHUB_TOKEN=\${{ secrets.GITHUB_TOKEN }} perl -M"GitHub::Crud" -e"GitHub::Crud::writeFileFromFileFromCurrentRun q(output.txt);"
 
   python:
     runs-on: ubuntu-latest
