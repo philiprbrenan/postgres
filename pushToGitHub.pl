@@ -22,6 +22,7 @@ if (1)                                                                          
  {for my $s(@files)                                                             # Upload each selected file
    {my $t = swapFilePrefix($s, $home);
     my $p = readFile($s);
+       $p = expandWellKnownWordsAsUrlsInMdFormat $p if $s =~ m(\.md\Z);         # Expand abbreviations in in readme
     my $w = writeFileUsingSavedToken($user, $repo, $t, $p);
     lll "$w $s $t";
    }
