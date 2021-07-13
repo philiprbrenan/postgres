@@ -22,10 +22,9 @@ INSERT 0 1
 
 ## From the command line
 
-- **select.c** shows how to connect to [Postgres database](https://www.postgresql.org/) directly from [The C Programming Language](https://1lib.eu/book/633119/db5c78). 
+- **select.c** shows how to connect to [Postgres database](https://www.postgresql.org/) directly from [the C programming language](https://1lib.eu/book/633119/db5c78). 
 - **Select.java** shows how to connect to [Postgres database](https://www.postgresql.org/) directly from [Java](https://en.wikipedia.org/wiki/Java_(programming_language)). 
-- **select.js** shows how to connect to [Postgres database](https://www.postgresql.org/) directly from js.
-
+- **select.js** shows how to connect to [Postgres database](https://www.postgresql.org/) directly from [NodeJs](https://en.wikipedia.org/wiki/NodeJs). 
 - **select.pl** shows how to connect to [Postgres database](https://www.postgresql.org/) directly from [Perl](http://www.perl.org/). 
 - **select.py** shows how to connect to [Postgres database](https://www.postgresql.org/) directly from [Python](https://www.python.org/). 
 - **upload.pl** shows how to return results to this repository from the action being run.
