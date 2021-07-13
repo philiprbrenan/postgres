@@ -135,7 +135,7 @@ jobs:
         sudo apt install apache2
         sudo a2enmod cgid
         sudo systemctl restart apache2
-        curl http://localhost/
+        curl -q http://localhost/
 
     - name: Start Postgre
       run: |
@@ -152,11 +152,10 @@ jobs:
 
     - name: Test
       run: |
-        curl         http://localhost/cgi-bin/selectCGI.pl
+        curl -q      http://localhost/cgi-bin/selectCGI.pl
 
     - name: Logs
       run: |
-        curl         http://localhost/cgi-bin/selectCGI.pl
         sudo cat /var/log/apache2/access.log
         sudo cat /var/log/apache2/error.log
 END
