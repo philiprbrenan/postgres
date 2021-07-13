@@ -1,4 +1,4 @@
-# Postgres on GitHub 2021-07-13 at 21:17:24
+# Postgres on GitHub 2021-07-13 at 21:29:47
 
 name: Test
 
@@ -112,4 +112,6 @@ jobs:
         sudo chmod ugo=rwx   /usr/lib/cgi-bin/selectCGI.pl
         sudo ls -la          /usr/lib/cgi-bin/selectCGI.pl
         perl -c              /usr/lib/cgi-bin/selectCGI.pl
-        curl http://localhost/cgi-bin/selectCGI.pl
+        curl         http://localhost/cgi-bin/selectCGI.pl
+        sudo cat /var/log/apache2/access.log
+        sudo cat /var/log/apache2/error.log
