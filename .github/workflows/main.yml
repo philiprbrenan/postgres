@@ -1,4 +1,4 @@
-# Postgres on GitHub 2021-07-13 at 21:31:15
+# Postgres on GitHub 2021-07-13 at 21:43:38
 
 name: Test
 
@@ -105,14 +105,25 @@ jobs:
         sudo systemctl restart apache2
         curl http://localhost/
 
-    - name: Test
+    - name: Start Postgre
       run: |
         sudo systemctl start postgresql.service
+        sudo -i -u postgres psql < load.txt > output.txt
+
+    - name: Install CGI
+      run: |
         sudo cp selectCGI.pl /usr/lib/cgi-bin/
         sudo chmod ugo=rwx   /usr/lib/cgi-bin/selectCGI.pl
         sudo ls -la          /usr/lib/cgi-bin/selectCGI.pl
         perl -c              /usr/lib/cgi-bin/selectCGI.pl
         perl                 /usr/lib/cgi-bin/selectCGI.pl
+
+    - name: Test
+      run: |
+        curl         http://localhost/cgi-bin/selectCGI.pl
+
+    - name: Logs
+      run: |
         curl         http://localhost/cgi-bin/selectCGI.pl
         sudo cat /var/log/apache2/access.log
         sudo cat /var/log/apache2/error.log
