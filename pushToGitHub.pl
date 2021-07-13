@@ -135,7 +135,7 @@ jobs:
         sudo apt install apache2
         sudo a2enmod cgid
         sudo systemctl restart apache2
-        curl -q http://localhost/
+        curl -s http://localhost/
 
     - name: Start Postgre
       run: |
@@ -147,12 +147,11 @@ jobs:
         sudo cp selectCGI.pl /usr/lib/cgi-bin/
         sudo chmod ugo=rwx   /usr/lib/cgi-bin/selectCGI.pl
         sudo ls -la          /usr/lib/cgi-bin/selectCGI.pl
-        perl -c              /usr/lib/cgi-bin/selectCGI.pl
         perl                 /usr/lib/cgi-bin/selectCGI.pl
 
     - name: Test
       run: |
-        curl -q      http://localhost/cgi-bin/selectCGI.pl
+        curl -s      http://localhost/cgi-bin/selectCGI.pl
 
     - name: Logs
       run: |
