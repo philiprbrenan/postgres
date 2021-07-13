@@ -16,7 +16,7 @@ my $d = DBI->connect('dbi:Pg:dbname=test;host=localhost','aaaa','aaaa') or die $
 my $s = qq(select * from test);
 my $t = dump($d->selectall_arrayref($s, { Slice => {} }));
 
-print <<'END';
+print <<END;
 <!doctype html>
 <pre>
 $t
