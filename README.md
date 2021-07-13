@@ -32,4 +32,4 @@ INSERT 0 1
 
 ## From Apache
 
-- **selectCGI.pl** shows how to connect to [Postgres database](https://www.postgresql.org/) via [Perl](http://www.perl.org/) [Common Gateway Interface](https://en.wikipedia.org/wiki/Common_Gateway_Interface) on [Apache Web Server](https://en.wikipedia.org/wiki/Apache_HTTP_Server). 
+- **selectCGI.pl** shows how to connect to [Postgres database](https://www.postgresql.org/) via [Perl](http://www.perl.org/) using [Common Gateway Interface](https://en.wikipedia.org/wiki/Common_Gateway_Interface) on [Apache Web Server](https://en.wikipedia.org/wiki/Apache_HTTP_Server). 
