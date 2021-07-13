@@ -18,7 +18,7 @@ my $d = DBI->connect('dbi:Pg:dbname=test;host=localhost','aaaa','aaaa')         
 my $s = qq(select * from test);                                                 # Execute an SQL query against the database
 my $t = dump($d->selectall_arrayref($s, { Slice => {} }));                      # Dump the response from the database
 
-print <<END;                                                                    # Print teh response from the database in some html
+print <<END;                                                                    # Print the response from the database in some html
 <!doctype html>
 <pre>
 $t
