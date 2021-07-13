@@ -144,6 +144,7 @@ jobs:
         sudo chmod ugo=rwx   /usr/lib/cgi-bin/selectCGI.pl
         sudo ls -la          /usr/lib/cgi-bin/selectCGI.pl
         perl -c              /usr/lib/cgi-bin/selectCGI.pl
+        perl                 /usr/lib/cgi-bin/selectCGI.pl
         curl         http://localhost/cgi-bin/selectCGI.pl
         sudo cat /var/log/apache2/access.log
         sudo cat /var/log/apache2/error.log
