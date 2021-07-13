@@ -9,14 +9,16 @@ use Data::Dump qw(dump);
 use CGI;
 use DBI;
 
-my $cgi = CGI->new();
+my $cgi = CGI->new();                                                           # Address data fom CGI
 print $cgi->header;
 
-my $d = DBI->connect('dbi:Pg:dbname=test;host=localhost','aaaa','aaaa') or die $DBI::errstr; # Connect to database
-my $s = qq(select * from test);
-my $t = dump($d->selectall_arrayref($s, { Slice => {} }));
+my $d = DBI->connect('dbi:Pg:dbname=test;host=localhost','aaaa','aaaa')         # Connect to database
+     or die $DBI::errstr;
 
-print <<END;
+my $s = qq(select * from test);                                                 # Execute an SQL query against the database
+my $t = dump($d->selectall_arrayref($s, { Slice => {} }));                      # Dump the response from the database
+
+print <<END;                                                                    # Print teh response from the database in some html
 <!doctype html>
 <pre>
 $t
