@@ -9,7 +9,7 @@ Clone this repo and you can run your own queries too in **C**, **Java**,
 ```
 Run sudo systemctl start postgresql.service
 CREATE DATABASE
-You are now connected to database "test" as [user](https://en.wikipedia.org/wiki/User_(computing)) "postgres".
+You are now connected to database "test" as "postgres".
 CREATE TABLE
 INSERT 0 1
 INSERT 0 1
