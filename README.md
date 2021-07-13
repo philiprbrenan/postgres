@@ -27,9 +27,11 @@ INSERT 0 1
 - **select.js** shows how to connect to [Postgres database](https://www.postgresql.org/) directly from [NodeJs](https://en.wikipedia.org/wiki/NodeJs). 
 - **select.pl** shows how to connect to [Postgres database](https://www.postgresql.org/) directly from [Perl](http://www.perl.org/). 
 - **select.py** shows how to connect to [Postgres database](https://www.postgresql.org/) directly from [Python](https://www.python.org/). 
-- **upload.pl** shows how to return results to this repository from the action being run.
-
 
 ## From Apache
 
-- **selectCGI.pl** shows how to connect to [Postgres database](https://www.postgresql.org/) via [Perl](http://www.perl.org/) using [Common Gateway Interface](https://en.wikipedia.org/wiki/Common_Gateway_Interface) on [Apache Web Server](https://en.wikipedia.org/wiki/Apache_HTTP_Server). 
+**selectCGI.pl** shows how to connect to [Postgres database](https://www.postgresql.org/) via [Perl](http://www.perl.org/) using [Common Gateway Interface](https://en.wikipedia.org/wiki/Common_Gateway_Interface) on [Apache Web Server](https://en.wikipedia.org/wiki/Apache_HTTP_Server). 
+
+## Uploading results
+
+**upload.pl** shows how to return results to a repository from the action being run by using a [Perl](http://www.perl.org/) one liner.
