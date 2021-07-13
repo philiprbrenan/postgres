@@ -20,14 +20,18 @@ INSERT 0 1
 (2 rows)
 ```
 
-**select.c** shows how to connect to Postgres directly from Ansi C.
+## From the command line
 
-**Select.java** shows how to connect to Postgres directly from Java.
+**select.c** shows how to connect to [Postgres database](https://www.postgresql.org/) directly from [The C Programming Language](https://1lib.eu/book/633119/db5c78). 
+**Select.java** shows how to connect to [Postgres database](https://www.postgresql.org/) directly from j.
 
-**select.js** shows how to connect to Postgres directly from Javascript.
+**select.js** shows how to connect to [Postgres database](https://www.postgresql.org/) directly from js.
 
-**select.pl** shows how to connect to Postgres directly from Perl.
-
-**select.py** shows how to connect to Postgres directly from Python.
-
+**select.pl** shows how to connect to [Postgres database](https://www.postgresql.org/) directly from [Perl](http://www.perl.org/). 
+**select.py** shows how to connect to [Postgres database](https://www.postgresql.org/) directly from [Python](https://www.python.org/). 
 **upload.pl** shows how to return results to this repository from the action being run.
+
+
+## From Apache
+
+**selectCGI.pl** shows how to connect to [Postgres database](https://www.postgresql.org/) via [Perl](http://www.perl.org/) [Common Gateway Interface](https://en.wikipedia.org/wiki/Common_Gateway_Interface) on [Apache Web Server](https://en.wikipedia.org/wiki/Apache_HTTP_Server). 
