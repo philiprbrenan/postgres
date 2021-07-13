@@ -128,7 +128,7 @@ jobs:
 
     - name: Install Perl
       run: |
-        sudo cpan -T -i Data::Table::Text GitHub::Crud Digest::SHA1 Date::Manip DBI DBD::Pg
+        sudo cpan -T -i Data::Table::Text GitHub::Crud Digest::SHA1 Date::Manip CGI DBI DBD::Pg
 
     - name: Install Apache
       run: |
@@ -141,7 +141,9 @@ jobs:
       run: |
         sudo systemctl start postgresql.service
         sudo cp selectCGI.pl /usr/lib/cgi-bin/
-        sudo chmod ugo=rwx /usr/lib/cgi-bin/selectCGI.pl
+        sudo chmod ugo=rwx   /usr/lib/cgi-bin/selectCGI.pl
+        sudo ls -la          /usr/lib/cgi-bin/selectCGI.pl
+        perl -c              /usr/lib/cgi-bin/selectCGI.pl
         curl http://localhost/cgi-bin/selectCGI.pl
 END
 
