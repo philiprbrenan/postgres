@@ -15,6 +15,10 @@ print $cgi->header;
 my $d = DBI->connect('dbi:Pg:dbname=test;host=localhost','aaaa','aaaa')         # Connect to database
      or die $DBI::errstr;
 
+my $a = $q->param('a'); my $b = $q->param('b');                                 # Get parameters from URL
+
+$d->do("insert into test values('$a', '$b');");                                 # Sample SQL statement
+
 my $s = qq(select * from test);                                                 # Execute an SQL query against the database
 my $t = dump($d->selectall_arrayref($s, { Slice => {} }));                      # Dump the response from the database
 
