@@ -22,11 +22,11 @@ INSERT 0 1
 
 ## From the command line
 
-- ![select.c](https://github.com/philiprbrenan/postgres/blob/main/select.pl) shows how to connect to [Postgres database](https://www.postgresql.org/) directly from [the C programming language](https://1lib.eu/book/633119/db5c78). 
-- **Select.java** shows how to connect to [Postgres database](https://www.postgresql.org/) directly from [Java](https://en.wikipedia.org/wiki/Java_(programming_language)). 
-- **select.js** shows how to connect to [Postgres database](https://www.postgresql.org/) directly from [NodeJs](https://en.wikipedia.org/wiki/NodeJs). 
-- **select.pl** shows how to connect to [Postgres database](https://www.postgresql.org/) directly from [Perl](http://www.perl.org/). 
-- **select.py** shows how to connect to [Postgres database](https://www.postgresql.org/) directly from [Python](https://www.python.org/). 
+- ![select.c](https://github.com/philiprbrenan/postgres/blob/main/select.c) shows how to connect to [Postgres database](https://www.postgresql.org/) directly from [the C programming language](https://1lib.eu/book/633119/db5c78). 
+- ![select.java](https://github.com/philiprbrenan/postgres/blob/main/select.java) shows how to connect to [Postgres database](https://www.postgresql.org/) directly from [Java](https://en.wikipedia.org/wiki/Java_(programming_language)). 
+- ![select.js](https://github.com/philiprbrenan/postgres/blob/main/select.js) shows how to connect to [Postgres database](https://www.postgresql.org/) directly from [NodeJs](https://en.wikipedia.org/wiki/NodeJs). 
+- ![select.pl](https://github.com/philiprbrenan/postgres/blob/main/select.pl) shows how to connect to [Postgres database](https://www.postgresql.org/) directly from [Perl](http://www.perl.org/). 
+- ![select.py](https://github.com/philiprbrenan/postgres/blob/main/select.py) shows how to connect to [Postgres database](https://www.postgresql.org/) directly from [Python](https://www.python.org/). 
 
 ## From Apache
 
