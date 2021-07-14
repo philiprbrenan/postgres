@@ -152,7 +152,7 @@ jobs:
 
     - name: Test
       run: |
-        curl -s      http://localhost/cgi-bin/selectCGI.pl?a=111111&b=2222222
+        curl -s     "http://localhost/cgi-bin/selectCGI.pl?a=111111&b=2222222"
 
     - name: Logs
       run: |
