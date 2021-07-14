@@ -50,3 +50,11 @@ INSERT 0 1
 ```
 GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} perl -M"GitHub::Crud" -e"GitHub::Crud::writeFileFromFileFromCurrentRun q(output.txt);"
 ```
+
+- although this does require that you [install](https://en.wikipedia.org/wiki/Installation_(computer_programs)) ![GitHub::Crud](https://metacpan.org/pod/GitHub::Crud) first via:
+
+```
+ sudo [CPAN](https://metacpan.org/author/PRBRENAN) -T -i Data::Table::Text GitHub::Crud Digest::SHA1 Date::Manip DBI DBD::Pg
+```
+
+as shown in the ![work flow description](https://github.com/philiprbrenan/postgres/blob/main/.github/workflows/main.yml).
