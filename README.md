@@ -22,7 +22,7 @@ INSERT 0 1
 
 ## From the command line
 
-- **select.c** shows how to connect to [Postgres database](https://www.postgresql.org/) directly from [the C programming language](https://1lib.eu/book/633119/db5c78). 
+- ![select.c](https://github.com/philiprbrenan/postgres/blob/main/select.pl) shows how to connect to [Postgres database](https://www.postgresql.org/) directly from [the C programming language](https://1lib.eu/book/633119/db5c78). 
 - **Select.java** shows how to connect to [Postgres database](https://www.postgresql.org/) directly from [Java](https://en.wikipedia.org/wiki/Java_(programming_language)). 
 - **select.js** shows how to connect to [Postgres database](https://www.postgresql.org/) directly from [NodeJs](https://en.wikipedia.org/wiki/NodeJs). 
 - **select.pl** shows how to connect to [Postgres database](https://www.postgresql.org/) directly from [Perl](http://www.perl.org/). 
@@ -30,7 +30,7 @@ INSERT 0 1
 
 ## From Apache
 
-**selectCGI.pl** shows how to connect to [Postgres database](https://www.postgresql.org/) via [Perl](http://www.perl.org/) using [Common Gateway Interface](https://en.wikipedia.org/wiki/Common_Gateway_Interface) on [Apache Web Server](https://en.wikipedia.org/wiki/Apache_HTTP_Server). 
+![selectCGI.c](https://github.com/philiprbrenan/postgres/blob/main/selectCGI.pl) shows how to connect to [Postgres database](https://www.postgresql.org/) via [Perl](http://www.perl.org/) using [Common Gateway Interface](https://en.wikipedia.org/wiki/Common_Gateway_Interface) on [Apache Web Server](https://en.wikipedia.org/wiki/Apache_HTTP_Server). 
 
 ## Uploading results
 
