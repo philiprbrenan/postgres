@@ -4,8 +4,7 @@
 
 Access a [Postgres database](https://www.postgresql.org/) database query from the [command line](https://en.wikipedia.org/wiki/Command-line_interface) or via [Apache Web Server](https://en.wikipedia.org/wiki/Apache_HTTP_Server) as a [GitHub](https://github.com/philiprbrenan) action
 - see [file](https://en.wikipedia.org/wiki/Computer_file) **output.txt** for the results of running the query in **load.txt**.
-Clone this repo and you can run your own queries too in **C**, **Java**,
-**Javascript**, **Perl**, **Python**.  Much easier than using [Docker](https://en.wikipedia.org/wiki/Docker_(software)) or [Amazon Web Services](http://aws.amazon.com). 
+Clone this repo and you can run your own queries too in [the C programming language](https://1lib.eu/book/633119/db5c78), [Java](https://en.wikipedia.org/wiki/Java_(programming_language)), [JavaScript](https://en.wikipedia.org/wiki/JavaScript), [Perl](http://www.perl.org/), [Python](https://www.python.org/).  Much easier than using [Docker](https://en.wikipedia.org/wiki/Docker_(software)) or [Amazon Web Services](http://aws.amazon.com). 
 ```
 Run sudo systemctl start postgresql.service
 CREATE DATABASE
