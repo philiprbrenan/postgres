@@ -39,9 +39,6 @@ INSERT 0 1
 [
   { address => "AAAA", name => "aaa" },
   { address => "BBBB", name => "bbb" },
-  { address => "CCCC", name => "ccc" },
-  { address => "DDDD", name => "ddd" },
-  { address => "EEEE", name => "eee" },
   { address => 2222222, name => 111111 },
 ]
 </pre>
