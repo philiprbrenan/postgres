@@ -9,13 +9,13 @@ use Data::Dump qw(dump);
 use CGI;
 use DBI;
 
-my $cgi = CGI->new();                                                           # Address data fom CGI
-print $cgi->header;
+my $c = CGI->new();                                                             # Address data fom CGI
+print $c->header;                                                               # Http header
 
 my $d = DBI->connect('dbi:Pg:dbname=test;host=localhost','aaaa','aaaa')         # Connect to database
      or die $DBI::errstr;
 
-my $a = $q->param('a'); my $b = $q->param('b');                                 # Get parameters from URL
+my $a = $c->param('a'); my $b = $c->param('b');                                 # Get parameters from URL
 
 $d->do("insert into test values('$a', '$b');");                                 # Sample SQL statement
 
