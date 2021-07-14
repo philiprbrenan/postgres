@@ -32,7 +32,7 @@ INSERT 0 1
 
 ![selectCGI.c](https://github.com/philiprbrenan/postgres/blob/main/selectCGI.pl) shows how to connect to [Postgres database](https://www.postgresql.org/) via [Perl](http://www.perl.org/) using [Common Gateway Interface](https://en.wikipedia.org/wiki/Common_Gateway_Interface) on [Apache Web Server](https://en.wikipedia.org/wiki/Apache_HTTP_Server). 
 ```
- [curl](https://linux.die.net/man/1/curl) -s     "http://localhost/cgi-bin/selectCGI.pl?a=111111&b=2222222"
+ curl -s     "http://localhost/cgi-bin/selectCGI.pl?a=111111&b=2222222"
 
 <!doctype html>
 <pre>
