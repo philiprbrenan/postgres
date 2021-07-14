@@ -49,4 +49,8 @@ INSERT 0 1
 
 ## Uploading results
 
-**upload.pl** shows how to return results to a repository from the action being run by using a [Perl](http://www.perl.org/) one liner.
+![upload.pl](https://github.com/philiprbrenan/postgres/blob/main/[upload.pl) shows how to return results to a repository from the action being run,  This can also be done via a [Perl](http://www.perl.org/) [one line program](https://en.wikipedia.org/wiki/One-liner_program) :
+
+```
+GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} [Perl](http://www.perl.org/) -M"GitHub::Crud" -e"GitHub::Crud::writeFileFromFileFromCurrentRun q(output.txt);"
+```
