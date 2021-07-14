@@ -21,11 +21,11 @@ INSERT 0 1
 
 ## From the command line
 
-- ![select.c](https://github.com/philiprbrenan/postgres/blob/main/select.c) shows how to connect to [Postgres database](https://www.postgresql.org/) directly from [the C programming language](https://1lib.eu/book/633119/db5c78). 
-- ![select.java](https://github.com/philiprbrenan/postgres/blob/main/select.java) shows how to connect to [Postgres database](https://www.postgresql.org/) directly from [Java](https://en.wikipedia.org/wiki/Java_(programming_language)). 
-- ![select.js](https://github.com/philiprbrenan/postgres/blob/main/select.js) shows how to connect to [Postgres database](https://www.postgresql.org/) directly from [NodeJs](https://en.wikipedia.org/wiki/NodeJs). 
-- ![select.pl](https://github.com/philiprbrenan/postgres/blob/main/select.pl) shows how to connect to [Postgres database](https://www.postgresql.org/) directly from [Perl](http://www.perl.org/). 
-- ![select.py](https://github.com/philiprbrenan/postgres/blob/main/select.py) shows how to connect to [Postgres database](https://www.postgresql.org/) directly from [Python](https://www.python.org/). 
+- [select.c](https://github.com/philiprbrenan/postgres/blob/main/select.c) shows how to connect to [Postgres database](https://www.postgresql.org/) directly from [the C programming language](https://1lib.eu/book/633119/db5c78). 
+- [select.java](https://github.com/philiprbrenan/postgres/blob/main/select.java) shows how to connect to [Postgres database](https://www.postgresql.org/) directly from [Java](https://en.wikipedia.org/wiki/Java_(programming_language)). 
+- [select.js](https://github.com/philiprbrenan/postgres/blob/main/select.js) shows how to connect to [Postgres database](https://www.postgresql.org/) directly from [NodeJs](https://en.wikipedia.org/wiki/NodeJs). 
+- [select.pl](https://github.com/philiprbrenan/postgres/blob/main/select.pl) shows how to connect to [Postgres database](https://www.postgresql.org/) directly from [Perl](http://www.perl.org/). 
+- [select.py](https://github.com/philiprbrenan/postgres/blob/main/select.py) shows how to connect to [Postgres database](https://www.postgresql.org/) directly from [Python](https://www.python.org/). 
 
 ## From Apache
 
@@ -45,16 +45,16 @@ INSERT 0 1
 
 ## Uploading results
 
-![upload.pl](https://github.com/philiprbrenan/postgres/blob/main/[upload.pl) shows how to return results to a repository from the action being run,  This can also be done via a [Perl](http://www.perl.org/) [one line program](https://en.wikipedia.org/wiki/One-liner_program) :
+[upload.pl](https://github.com/philiprbrenan/postgres/blob/main/[upload.pl) shows how to return results to a repository from the action being run,  This can also be done via a [Perl](http://www.perl.org/) [one line program](https://en.wikipedia.org/wiki/One-liner_program) :
 
 ```
 GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} perl -M"GitHub::Crud" -e"GitHub::Crud::writeFileFromFileFromCurrentRun q(output.txt);"
 ```
 
-- although this does require that you [install](https://en.wikipedia.org/wiki/Installation_(computer_programs)) ![GitHub::Crud](https://metacpan.org/pod/GitHub::Crud) first via:
+- although this does require that you [install](https://en.wikipedia.org/wiki/Installation_(computer_programs)) [GitHub::Crud](https://metacpan.org/pod/GitHub::Crud) first via:
 
 ```
  sudo cpan -T -i Data::Table::Text GitHub::Crud Digest::SHA1 Date::Manip DBI DBD::Pg
 ```
 
-as shown in the ![work flow description](https://github.com/philiprbrenan/postgres/blob/main/.github/workflows/main.yml).
+as shown in the [work flow description](https://github.com/philiprbrenan/postgres/blob/main/.github/workflows/main.yml).
