@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 #-------------------------------------------------------------------------------
-# Test Sql from Perl.
+# Test Sql from Perl
 # Philip R Brenan at appaapps dot com, Appa Apps Ltd Inc., 2021
 #-------------------------------------------------------------------------------
 use warnings FATAL => qw(all);
